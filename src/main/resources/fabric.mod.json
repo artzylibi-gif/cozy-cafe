@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "cozycafe",
+  "version": "${version}",
+  "name": "Cozy Cafe",
+  "description": "A cozy restaurant/cafe gameplay addon. Designed to work alongside Easy NPC for NPC rendering and dialogue.",
+  "authors": ["you"],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/cozycafe/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.cozycafe.mod.CozyCafeMod"]
+  },
+  "mixins": [],
+  "depends": {
+    "fabricloader": ">=0.15.0",
+    "fabric": "*",
+    "minecraft": "1.20.1",
+    "java": ">=17"
+  },
+  "custom": {
+    "cozycafe:requires_npc_mod": "Easy NPC (any mod providing entities you right-click to talk to also works, but commands in this mod default to Easy NPC's /easy_npc syntax)"
+  }
+}
