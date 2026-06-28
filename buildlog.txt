@@ -1,0 +1,55 @@
+
+> Configure project :
+Fabric Loom: 1.6.12
+
+> Task :compileJava FAILED
+/workspaces/cozy-cafe/src/main/java/com/cozycafe/mod/npc/NpcEventCommand.java:75: error: incompatible types: net.minecraft.util.math.random.Random cannot be converted to java.util.Random
+        session.startOrdering(shop, source.getServer().getOverworld().getRandom());
+                                                                               ^
+/workspaces/cozy-cafe/src/main/java/com/cozycafe/mod/npc/NpcEventCommand.java:83: error: incompatible types: net.minecraft.util.math.random.Random cannot be converted to java.util.Random
+        session.onTradeCompleted(source.getWorld(), source.getServer().getOverworld().getRandom());
+                                                                                               ^
+/workspaces/cozy-cafe/src/main/java/com/cozycafe/mod/ShopManager.java:129: error: cannot find symbol
+                new PersistentState.Type<>(ShopManager::new, ShopManager::fromNbt, null),
+                                   ^
+  symbol:   class Type
+  location: class PersistentState
+/workspaces/cozy-cafe/src/main/java/com/cozycafe/mod/ShopManager.java:128: error: incompatible types: cannot infer type-variable(s) T
+        return manager.getOrCreate(
+                                  ^
+    (argument mismatch; String cannot be converted to Supplier<T>)
+  where T is a type-variable:
+    T extends PersistentState declared in method <T>getOrCreate(Function<NbtCompound,T>,Supplier<T>,String)
+/workspaces/cozy-cafe/src/main/java/com/cozycafe/mod/ShopManager.java:169: error: byte cannot be dereferenced
+        NbtList menuList = nbt.getList("menu", NbtCompound.COMPOUND_TYPE.id());
+                                                                        ^
+/workspaces/cozy-cafe/src/main/java/com/cozycafe/mod/ShopManager.java:178: error: byte cannot be dereferenced
+        NbtList sessionList = nbt.getList("sessions", NbtCompound.COMPOUND_TYPE.id());
+                                                                               ^
+/workspaces/cozy-cafe/src/main/java/com/cozycafe/mod/seat/SeatManager.java:66: error: setMarker(boolean) has private access in ArmorStandEntity
+        stand.setMarker(false); // marker=true disables hitbox AND riding; we need riding to work
+             ^
+/workspaces/cozy-cafe/src/main/java/com/cozycafe/mod/seat/SeatManager.java:127: error: byte cannot be dereferenced
+        NbtList list = nbt.getList("chairs", NbtCompound.COMPOUND_TYPE.id());
+                                                                      ^
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+8 errors
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.8/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 2s
+1 actionable task: 1 executed
